@@ -28,11 +28,9 @@ class MemeController {
     
     //read
     
-    
-    
-    
     func fetchCustomAlbumPhotos()
     {
+        
         let albumName = "Memes"
         var assetCollection = PHAssetCollection()
         var albumFound = Bool()
@@ -40,6 +38,7 @@ class MemeController {
         let fetchOptions = PHFetchOptions()
         
         fetchOptions.predicate = NSPredicate(format: "title = %@", albumName)
+        
         let collection:PHFetchResult = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
         
         if let firstObject = collection.firstObject{
@@ -51,7 +50,9 @@ class MemeController {
         _ = collection.count
         
         photoAssets = PHAsset.fetchAssets(in: assetCollection, options: nil) as! PHFetchResult<AnyObject>
+        
         let imageManager = PHCachingImageManager()
+        
         photoAssets.enumerateObjects{(object: AnyObject!,
             count: Int,
             stop: UnsafeMutablePointer<ObjCBool>) in
@@ -83,7 +84,6 @@ class MemeController {
                                             print("enum for image, This is number 2")
                                             
                 })
-                
             }
         }
     }
