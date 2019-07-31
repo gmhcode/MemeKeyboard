@@ -21,6 +21,8 @@
 		90F3A61822F0FCA2001B75D6 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A61722F0FCA2001B75D6 /* MemeCollectionViewCell.swift */; };
 		90F3A61E22F22FD8001B75D6 /* NewMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A61D22F22FD8001B75D6 /* NewMemeViewController.swift */; };
 		90F3A62122F2307B001B75D6 /* NewMemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A62022F2307B001B75D6 /* NewMemeTableViewCell.swift */; };
+		90F3A62222F24100001B75D6 /* MemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A61522F0F6D5001B75D6 /* MemeController.swift */; };
+		90F3A62322F24113001B75D6 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A61322F0F5D4001B75D6 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F3A62322F24113001B75D6 /* Meme.swift in Sources */,
 				90F3A60622F0E5AE001B75D6 /* KeyboardViewController.swift in Sources */,
+				90F3A62222F24100001B75D6 /* MemeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

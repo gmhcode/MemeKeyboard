@@ -10,9 +10,10 @@ import UIKit
 
 class Meme {
     
-    let image : UIImage
+    var image : UIImage
     var name : String?
     var uuid : String
+    var shouldUse = false
     
     init(image : UIImage, name: String?, uuid : String = UUID().uuidString) {
         self.image = image
@@ -26,3 +27,7 @@ extension Meme: Equatable {
         return lhs.image == rhs.image && lhs.uuid == rhs.uuid && lhs.name == rhs.name
     }
 }
+
+//struct CodableMeme: Codable {
+//    <#fields#>
+//}

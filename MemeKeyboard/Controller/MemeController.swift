@@ -24,10 +24,50 @@ class MemeController {
         memes.insert(newMeme, at: 0)
     }
     
-    
+    func addMeme(meme: Meme){
+        memes.append(meme)
+    }
     
     //read
-    
+//    func fileURL() -> URL{
+//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        let documentsDirectory = paths[0]
+//        // array of the thing youre saving.json "entries.json"
+//        let fileName = "memes.json"
+//        let fullURL = documentsDirectory.appendingPathComponent(fileName)
+//        // this adds a word to the file URL
+//        print(fullURL)
+//
+//        return fullURL
+//
+//    }
+//
+//
+//
+//    func saveToPersistentStorage(){
+//        let encoder = JSONEncoder()
+//        do{
+//            let data = try encoder.encode(<# self.entries #>)
+//            try data.write(to: fileURL())
+//        } catch{
+//            print("There was an error in \(#function) \(error) : \(error.localizedDescription)")
+//        }
+//    }
+//
+//
+//
+//    func loadFromPersistentStorage() -> [<# Entry #>] {
+//        let decoder = JSONDecoder()
+//        do{
+//            let data = try Data(contentsOf: fileURL())
+//
+//            let entries = try decoder.decode([<# Entry #>].self, from: data)
+//            return entries
+//        }catch{
+//            print("There was an error in \(#function) \(error) : \(error.localizedDescription)")
+//        }
+//        return []
+//    }
 //    func fetchCustomAlbumPhotos()
 //    {
 //
