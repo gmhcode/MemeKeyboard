@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
     
     @IBAction func addMemeButtonTapped(_ sender: Any) {
         
-        openPhotoLibrary()
+//        openPhotoLibrary()
         
     }
     
