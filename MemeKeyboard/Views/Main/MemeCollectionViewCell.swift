@@ -21,11 +21,6 @@ class MemeCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        
-        
-        
     }
-    
-    
     
 }

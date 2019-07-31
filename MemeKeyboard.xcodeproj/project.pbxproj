@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90F3A5EE22F0E550001B75D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A5ED22F0E550001B75D6 /* AppDelegate.swift */; };
-		90F3A5F022F0E550001B75D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A5EF22F0E550001B75D6 /* ViewController.swift */; };
+		90F3A5F022F0E550001B75D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A5EF22F0E550001B75D6 /* MainViewController.swift */; };
 		90F3A5F322F0E550001B75D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F3A5F122F0E550001B75D6 /* Main.storyboard */; };
 		90F3A5F522F0E551001B75D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F3A5F422F0E551001B75D6 /* Assets.xcassets */; };
 		90F3A5F822F0E551001B75D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F3A5F622F0E551001B75D6 /* LaunchScreen.storyboard */; };
@@ -48,7 +48,7 @@
 /* Begin PBXFileReference section */
 		90F3A5EA22F0E550001B75D6 /* MemeKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F3A5ED22F0E550001B75D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90F3A5EF22F0E550001B75D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90F3A5EF22F0E550001B75D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		90F3A5F222F0E550001B75D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90F3A5F422F0E551001B75D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90F3A5F722F0E551001B75D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,10 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				90F3A5ED22F0E550001B75D6 /* AppDelegate.swift */,
-				90F3A5EF22F0E550001B75D6 /* ViewController.swift */,
-				90F3A61722F0FCA2001B75D6 /* MemeCollectionViewCell.swift */,
-				90F3A61322F0F5D4001B75D6 /* Meme.swift */,
-				90F3A61522F0F6D5001B75D6 /* MemeController.swift */,
+				90F3A61B22F22C48001B75D6 /* Views */,
+				90F3A61A22F22C40001B75D6 /* Model */,
+				90F3A61922F22C2E001B75D6 /* Controller */,
 				90F3A5F122F0E550001B75D6 /* Main.storyboard */,
 				90F3A5F422F0E551001B75D6 /* Assets.xcassets */,
 				90F3A5F622F0E551001B75D6 /* LaunchScreen.storyboard */,
@@ -124,6 +123,39 @@
 				90F3A61122F0EDC9001B75D6 /* Media.xcassets */,
 			);
 			path = keyboard;
+			sourceTree = "<group>";
+		};
+		90F3A61922F22C2E001B75D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				90F3A61522F0F6D5001B75D6 /* MemeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		90F3A61A22F22C40001B75D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90F3A61322F0F5D4001B75D6 /* Meme.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		90F3A61B22F22C48001B75D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90F3A61C22F22C8E001B75D6 /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		90F3A61C22F22C8E001B75D6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				90F3A5EF22F0E550001B75D6 /* MainViewController.swift */,
+				90F3A61722F0FCA2001B75D6 /* MemeCollectionViewCell.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +263,7 @@
 			files = (
 				90F3A61822F0FCA2001B75D6 /* MemeCollectionViewCell.swift in Sources */,
 				90F3A61422F0F5D4001B75D6 /* Meme.swift in Sources */,
-				90F3A5F022F0E550001B75D6 /* ViewController.swift in Sources */,
+				90F3A5F022F0E550001B75D6 /* MainViewController.swift in Sources */,
 				90F3A5EE22F0E550001B75D6 /* AppDelegate.swift in Sources */,
 				90F3A61622F0F6D5001B75D6 /* MemeController.swift in Sources */,
 			);
