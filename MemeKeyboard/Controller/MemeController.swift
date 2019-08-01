@@ -12,62 +12,85 @@ import Photos
 class MemeController {
     
     static let shared = MemeController()
+    
+    
+    private init() {
+        
+        memesToAdd = convertCodableToMemes(codableMemes: CodableMemeController.shared.loadFromPersistentStorage())
+        
+    }
+    
+    
+    
+    
+    /// never SET memes, only GET
     var memes : [Meme] = [] {
         didSet{
             print(memes)
+            
         }
     }
+    /// never GET from memesToAdd, only SET
+    var memesToAdd : [Meme] = [] {
+        didSet {
+            filterMemes(memesToAdd: memesToAdd)
+            memesToAdd = []
+        }
+    }
+    
+    private func filterMemes(memesToAdd : [Meme]){
+        
+        var newMemes : [Meme] = []
+        
+        for i in memesToAdd {
+            
+            if memes.contains(i) == false {
+                
+                newMemes.append(i)
+            }
+        }
+        memes.append(contentsOf: newMemes)
+        
+        let newCodableMemes = CodableMemeController.shared.convertMemesToCodable(memes: newMemes)
+        CodableMemeController.codableMemes.append(contentsOf: newCodableMemes)
+    }
+    
+    
     
     //create
     func createMeme(name: String?, image : UIImage){
         let newMeme = Meme(image: image, name: name)
-        memes.insert(newMeme, at: 0)
+        memesToAdd.append(newMeme)
     }
     
     func addMeme(meme: Meme){
-        memes.append(meme)
+        memesToAdd.append(meme)
     }
     
     //read
-//    func fileURL() -> URL{
-//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        let documentsDirectory = paths[0]
-//        // array of the thing youre saving.json "entries.json"
-//        let fileName = "memes.json"
-//        let fullURL = documentsDirectory.appendingPathComponent(fileName)
-//        // this adds a word to the file URL
-//        print(fullURL)
-//
-//        return fullURL
-//
-//    }
-//
-//
-//
-//    func saveToPersistentStorage(){
-//        let encoder = JSONEncoder()
-//        do{
-//            let data = try encoder.encode(<# self.entries #>)
-//            try data.write(to: fileURL())
-//        } catch{
-//            print("There was an error in \(#function) \(error) : \(error.localizedDescription)")
-//        }
-//    }
-//
-//
-//
-//    func loadFromPersistentStorage() -> [<# Entry #>] {
-//        let decoder = JSONDecoder()
-//        do{
-//            let data = try Data(contentsOf: fileURL())
-//
-//            let entries = try decoder.decode([<# Entry #>].self, from: data)
-//            return entries
-//        }catch{
-//            print("There was an error in \(#function) \(error) : \(error.localizedDescription)")
-//        }
-//        return []
-//    }
+
+    
+    func convertCodableToMemes(codableMemes : [CodableMeme]) -> [Meme] {
+        
+        var newMemes : [Meme] = []
+        
+        for i in codableMemes {
+            
+            let newMeme = Meme(image: UIImage(data: i.imageData)!, name: i.name, uuid: i.uuid)
+            
+            newMeme.shouldUse = true
+            
+            newMemes.append(newMeme)
+            
+        }
+        
+        
+        return newMemes
+    }
+    
+    
+    
+    
 //    func fetchCustomAlbumPhotos()
 //    {
 //

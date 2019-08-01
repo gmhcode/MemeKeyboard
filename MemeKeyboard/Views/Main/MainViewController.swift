@@ -10,13 +10,17 @@ import UIKit
 import Photos
 class MainViewController: UIViewController {
 
-    let memes = MemeController.shared.memes
+    var memes = MemeController.shared.memes
     let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+//        memes = MemeController.shared.memes
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
