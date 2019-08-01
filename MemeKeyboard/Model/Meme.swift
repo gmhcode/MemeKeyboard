@@ -29,5 +29,14 @@ extension Meme: Equatable {
 }
 
 //struct CodableMeme: Codable {
-//    <#fields#>
+//    var image : UIImage
+//var name : String?
+//var uuid : String
+//var shouldUse = false
+//
+//init(image : UIImage, name: String?, uuid : String = UUID().uuidString) {
+//    self.image = image
+//    self.name = name
+//    self.uuid = uuid
+//}
 //}
