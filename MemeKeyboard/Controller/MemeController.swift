@@ -16,12 +16,12 @@ class MemeController {
     
     private init() {
         
-        memesToAdd = convertCodableToMemes(codableMemes: CodableMemeController.shared.loadFromPersistentStorage())
+        let loadedMemes = convertCodableToMemes(codableMemes: CodableMemeController.shared.loadFromPersistentStorage())
+        memes = loadedMemes
+        
+        print("a")
         
     }
-    
-    
-    
     
     /// never SET memes, only GET
     var memes : [Meme] = [] {
@@ -33,12 +33,18 @@ class MemeController {
     /// never GET from memesToAdd, only SET
     var memesToAdd : [Meme] = [] {
         didSet {
-            filterMemes(memesToAdd: memesToAdd)
+            
+            let memesToAppend = filterMemes(memesToAdd: memesToAdd)
+            let codableMemes = CodableMemeController.shared.convertMemesToCodable(memes: memesToAppend)
+            
+            memes.append(contentsOf: memesToAppend)
+            CodableMemeController.codableMemes.append(contentsOf: codableMemes)
+            
             memesToAdd = []
         }
     }
     
-    private func filterMemes(memesToAdd : [Meme]){
+    private func filterMemes(memesToAdd : [Meme]) -> [Meme]{
         
         var newMemes : [Meme] = []
         
@@ -51,8 +57,9 @@ class MemeController {
         }
         memes.append(contentsOf: newMemes)
         
-        let newCodableMemes = CodableMemeController.shared.convertMemesToCodable(memes: newMemes)
-        CodableMemeController.codableMemes.append(contentsOf: newCodableMemes)
+        //convert and add to codable memes
+        
+        return newMemes
     }
     
     

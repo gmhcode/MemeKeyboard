@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90E53A7722F389420059FC1B /* KeyboardMemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7622F389420059FC1B /* KeyboardMemeController.swift */; };
+		90E53A7922F38AA00059FC1B /* CodableMeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7822F38AA00059FC1B /* CodableMeme.swift */; };
+		90E53A7A22F38AB40059FC1B /* CodableMeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7822F38AA00059FC1B /* CodableMeme.swift */; };
+		90E53A7B22F38AF90059FC1B /* KeyboardMemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7622F389420059FC1B /* KeyboardMemeController.swift */; };
+		90E53A7D22F38B0E0059FC1B /* CodableMemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7C22F38B0E0059FC1B /* CodableMemeController.swift */; };
+		90E53A8122F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E53A8022F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib */; };
+		90E53A8422F3CBED0059FC1B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A8222F3CBED0059FC1B /* CollectionViewCell.swift */; };
+		90E53A8522F3CBED0059FC1B /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E53A8322F3CBED0059FC1B /* CollectionViewCell.xib */; };
+		90E53A8722F3D0FB0059FC1B /* CodableMemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7C22F38B0E0059FC1B /* CodableMemeController.swift */; };
 		90F3A5EE22F0E550001B75D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A5ED22F0E550001B75D6 /* AppDelegate.swift */; };
 		90F3A5F022F0E550001B75D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A5EF22F0E550001B75D6 /* MainViewController.swift */; };
 		90F3A5F322F0E550001B75D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F3A5F122F0E550001B75D6 /* Main.storyboard */; };
@@ -21,7 +30,6 @@
 		90F3A61822F0FCA2001B75D6 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A61722F0FCA2001B75D6 /* MemeCollectionViewCell.swift */; };
 		90F3A61E22F22FD8001B75D6 /* NewMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A61D22F22FD8001B75D6 /* NewMemeViewController.swift */; };
 		90F3A62122F2307B001B75D6 /* NewMemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A62022F2307B001B75D6 /* NewMemeTableViewCell.swift */; };
-		90F3A62222F24100001B75D6 /* MemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A61522F0F6D5001B75D6 /* MemeController.swift */; };
 		90F3A62322F24113001B75D6 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3A61322F0F5D4001B75D6 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +58,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		90E53A7622F389420059FC1B /* KeyboardMemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardMemeController.swift; sourceTree = "<group>"; };
+		90E53A7822F38AA00059FC1B /* CodableMeme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableMeme.swift; sourceTree = "<group>"; };
+		90E53A7C22F38B0E0059FC1B /* CodableMemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableMemeController.swift; sourceTree = "<group>"; };
+		90E53A8022F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardCollectionViewCell.xib; sourceTree = "<group>"; };
+		90E53A8222F3CBED0059FC1B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		90E53A8322F3CBED0059FC1B /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		90E53A8822F3D2640059FC1B /* keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = keyboard.entitlements; sourceTree = "<group>"; };
+		90E53A8922F3D2DB0059FC1B /* MemeKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemeKeyboard.entitlements; sourceTree = "<group>"; };
 		90F3A5EA22F0E550001B75D6 /* MemeKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F3A5ED22F0E550001B75D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90F3A5EF22F0E550001B75D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +124,7 @@
 		90F3A5EC22F0E550001B75D6 /* MemeKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				90E53A8922F3D2DB0059FC1B /* MemeKeyboard.entitlements */,
 				90F3A5ED22F0E550001B75D6 /* AppDelegate.swift */,
 				90F3A61B22F22C48001B75D6 /* Views */,
 				90F3A61A22F22C40001B75D6 /* Model */,
@@ -123,10 +140,14 @@
 		90F3A60422F0E5AE001B75D6 /* keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				90E53A8822F3D2640059FC1B /* keyboard.entitlements */,
 				90F3A60522F0E5AE001B75D6 /* KeyboardViewController.swift */,
 				90F3A60722F0E5AE001B75D6 /* Info.plist */,
 				90F3A60F22F0E5D6001B75D6 /* keyboardStory.xib */,
+				90E53A8222F3CBED0059FC1B /* CollectionViewCell.swift */,
+				90E53A8322F3CBED0059FC1B /* CollectionViewCell.xib */,
 				90F3A61122F0EDC9001B75D6 /* Media.xcassets */,
+				90E53A8022F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib */,
 			);
 			path = keyboard;
 			sourceTree = "<group>";
@@ -135,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				90F3A61522F0F6D5001B75D6 /* MemeController.swift */,
+				90E53A7C22F38B0E0059FC1B /* CodableMemeController.swift */,
+				90E53A7622F389420059FC1B /* KeyboardMemeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				90F3A61322F0F5D4001B75D6 /* Meme.swift */,
+				90E53A7822F38AA00059FC1B /* CodableMeme.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,9 +249,19 @@
 				TargetAttributes = {
 					90F3A5E922F0E550001B75D6 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					90F3A60222F0E5AE001B75D6 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -266,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F3A61222F0EDC9001B75D6 /* Media.xcassets in Resources */,
+				90E53A8122F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib in Resources */,
+				90E53A8522F3CBED0059FC1B /* CollectionViewCell.xib in Resources */,
 				90F3A61022F0E5D6001B75D6 /* keyboardStory.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,8 +318,11 @@
 				90F3A62122F2307B001B75D6 /* NewMemeTableViewCell.swift in Sources */,
 				90F3A5F022F0E550001B75D6 /* MainViewController.swift in Sources */,
 				90F3A61E22F22FD8001B75D6 /* NewMemeViewController.swift in Sources */,
+				90E53A7722F389420059FC1B /* KeyboardMemeController.swift in Sources */,
 				90F3A5EE22F0E550001B75D6 /* AppDelegate.swift in Sources */,
 				90F3A61622F0F6D5001B75D6 /* MemeController.swift in Sources */,
+				90E53A7D22F38B0E0059FC1B /* CodableMemeController.swift in Sources */,
+				90E53A7922F38AA00059FC1B /* CodableMeme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,9 +330,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E53A8422F3CBED0059FC1B /* CollectionViewCell.swift in Sources */,
 				90F3A62322F24113001B75D6 /* Meme.swift in Sources */,
 				90F3A60622F0E5AE001B75D6 /* KeyboardViewController.swift in Sources */,
-				90F3A62222F24100001B75D6 /* MemeController.swift in Sources */,
+				90E53A8722F3D0FB0059FC1B /* CodableMemeController.swift in Sources */,
+				90E53A7B22F38AF90059FC1B /* KeyboardMemeController.swift in Sources */,
+				90E53A7A22F38AB40059FC1B /* CodableMeme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +490,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MemeKeyboard/MemeKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57FTCZV5HS;
 				INFOPLIST_FILE = MemeKeyboard/Info.plist;
@@ -467,6 +510,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MemeKeyboard/MemeKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57FTCZV5HS;
 				INFOPLIST_FILE = MemeKeyboard/Info.plist;
@@ -484,6 +528,7 @@
 		90F3A60C22F0E5AE001B75D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = keyboard/keyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57FTCZV5HS;
 				INFOPLIST_FILE = keyboard/Info.plist;
@@ -503,6 +548,7 @@
 		90F3A60D22F0E5AE001B75D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = keyboard/keyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57FTCZV5HS;
 				INFOPLIST_FILE = keyboard/Info.plist;

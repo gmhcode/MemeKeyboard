@@ -45,10 +45,13 @@ class NewMemeViewController: UIViewController {
     @IBAction func doneAddingMemesButtonTapped(_ sender: Any) {
         #warning("save memes")
         
-//        let filteredMemes
-        tableView.reloadData()
-//        MemeController.shared.addMeme(meme:   )
-//        self.dismiss(animated: false, completion: nil)
+        let filteredMemes = newMemes.filter({$0.shouldUse == true})
+        filteredMemes.forEach({MemeController.shared.addMeme(meme: $0)})
+        print("❌\(CodableMemeController.shared.preparedCodableMemes)")
+        CodableMemeController.shared.saveToPersistentStorage()
+        self.dismiss(animated: true, completion: nil)
+//        tableView.reloadData()
+
         
     }
     
@@ -135,7 +138,7 @@ extension NewMemeViewController: NewMemeCellDelegate, UIImagePickerControllerDel
             let indexPath = IndexPath(row: index!, section: 0)
             //        tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
             
-            
+            print("🌸\(image.pngData())")
             tableView.reloadData()
             tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
             

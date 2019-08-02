@@ -14,13 +14,12 @@ class KeyboardViewController: UIInputViewController {
     
     
     @IBOutlet var nextKeyboardButton: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var buttonImage: UIButton!
     
-    
-    
     var keyboardView: UIView!
-
+    var memes : [Meme]?
 
     
     @IBAction func imageButtonTest(_ sender: Any) {
@@ -45,10 +44,16 @@ class KeyboardViewController: UIInputViewController {
         
         // Add custom view sizing constraints here
     }
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadInterface()
+        collectionView.delegate = self
+        collectionView.dataSource = self
         proxy = textDocumentProxy as UITextDocumentProxy
         nextKeyboardButton.addTarget(self, action: #selector(UIInputViewController.advanceToNextInputMode), for: .touchUpInside)
         
@@ -68,10 +73,18 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     func loadInterface(){
+        
+        
         let keyboardNib = UINib(nibName: "keyboardStory", bundle: nil)
         keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as! UIView
         keyboardView.frame.size = view.frame.size
+        
+        let nibName = UINib(nibName: "CollectionViewCell", bundle:nil)
+        collectionView.register(nibName, forCellWithReuseIdentifier: "collectionCell")
+        
         view.addSubview(keyboardView)
+        
+        
     }
     override func viewWillLayoutSubviews() {
         self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
@@ -108,3 +121,25 @@ class KeyboardViewController: UIInputViewController {
         
     }
 }
+extension KeyboardViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        memes = KeyboardMemeController.shared.memes
+    
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath)
+        
+        
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width * 0.2, height: collectionView.frame.height * 0.2)
+    }
+    
+}
+
+
