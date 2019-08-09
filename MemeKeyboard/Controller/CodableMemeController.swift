@@ -40,7 +40,7 @@ class CodableMemeController {
     }
     
     
-    
+    // update notes
     func convertMemesToCodable(memes: [Meme] ) -> [CodableMeme] {
         
         var newCodableMemes : [CodableMeme] = []
