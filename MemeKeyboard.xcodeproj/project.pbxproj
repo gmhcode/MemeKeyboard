@@ -12,7 +12,6 @@
 		90E53A7A22F38AB40059FC1B /* CodableMeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7822F38AA00059FC1B /* CodableMeme.swift */; };
 		90E53A7B22F38AF90059FC1B /* KeyboardMemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7622F389420059FC1B /* KeyboardMemeController.swift */; };
 		90E53A7D22F38B0E0059FC1B /* CodableMemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7C22F38B0E0059FC1B /* CodableMemeController.swift */; };
-		90E53A8122F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E53A8022F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib */; };
 		90E53A8422F3CBED0059FC1B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A8222F3CBED0059FC1B /* CollectionViewCell.swift */; };
 		90E53A8522F3CBED0059FC1B /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E53A8322F3CBED0059FC1B /* CollectionViewCell.xib */; };
 		90E53A8722F3D0FB0059FC1B /* CodableMemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7C22F38B0E0059FC1B /* CodableMemeController.swift */; };
@@ -61,7 +60,6 @@
 		90E53A7622F389420059FC1B /* KeyboardMemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardMemeController.swift; sourceTree = "<group>"; };
 		90E53A7822F38AA00059FC1B /* CodableMeme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableMeme.swift; sourceTree = "<group>"; };
 		90E53A7C22F38B0E0059FC1B /* CodableMemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableMemeController.swift; sourceTree = "<group>"; };
-		90E53A8022F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardCollectionViewCell.xib; sourceTree = "<group>"; };
 		90E53A8222F3CBED0059FC1B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		90E53A8322F3CBED0059FC1B /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		90E53A8822F3D2640059FC1B /* keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = keyboard.entitlements; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				90E53A8222F3CBED0059FC1B /* CollectionViewCell.swift */,
 				90E53A8322F3CBED0059FC1B /* CollectionViewCell.xib */,
 				90F3A61122F0EDC9001B75D6 /* Media.xcassets */,
-				90E53A8022F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib */,
 			);
 			path = keyboard;
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F3A61222F0EDC9001B75D6 /* Media.xcassets in Resources */,
-				90E53A8122F3C5AD0059FC1B /* KeyboardCollectionViewCell.xib in Resources */,
 				90E53A8522F3CBED0059FC1B /* CollectionViewCell.xib in Resources */,
 				90F3A61022F0E5D6001B75D6 /* keyboardStory.xib in Resources */,
 			);

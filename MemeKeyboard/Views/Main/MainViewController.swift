@@ -75,6 +75,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("blah")
+        
         collectionView.reloadData()
     }
     

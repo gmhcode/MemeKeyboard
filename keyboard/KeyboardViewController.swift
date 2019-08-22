@@ -54,6 +54,7 @@ class KeyboardViewController: UIInputViewController {
         loadInterface()
         collectionView.delegate = self
         collectionView.dataSource = self
+        
         proxy = textDocumentProxy as UITextDocumentProxy
         nextKeyboardButton.addTarget(self, action: #selector(UIInputViewController.advanceToNextInputMode), for: .touchUpInside)
         
@@ -67,6 +68,9 @@ class KeyboardViewController: UIInputViewController {
         
         self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
         
+        let nibName = UINib(nibName: "CollectionViewCell", bundle:nil)
+        collectionView.register(nibName, forCellWithReuseIdentifier: "collectionCell")
+        
         self.view.addSubview(self.nextKeyboardButton)
         
         self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
@@ -78,9 +82,6 @@ class KeyboardViewController: UIInputViewController {
         let keyboardNib = UINib(nibName: "keyboardStory", bundle: nil)
         keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as! UIView
         keyboardView.frame.size = view.frame.size
-        
-        let nibName = UINib(nibName: "CollectionViewCell", bundle:nil)
-        collectionView.register(nibName, forCellWithReuseIdentifier: "collectionCell")
         
         view.addSubview(keyboardView)
         
@@ -125,8 +126,20 @@ extension KeyboardViewController : UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         memes = KeyboardMemeController.shared.memes
-    
-        return 1
+        let paste = UIPasteboard.general
+        
+        var data = Data()
+        #warning("this is a test to see if we can paste a meme")
+        do {
+            
+            data = try ((memes?[0].image.jpegData(compressionQuality: 0.25))!)
+            
+            paste.setData(data, forPasteboardType: UIPasteboard.typeListImage[0] as! String)
+            
+        }catch{
+            print("❌ There was an error in \(#function) \(error) : \(error.localizedDescription)")
+        }
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -137,7 +150,7 @@ extension KeyboardViewController : UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width * 0.2, height: collectionView.frame.height * 0.2)
+        return CGSize(width: collectionView.frame.width * 0.2, height: collectionView.frame.height)
     }
     
 }

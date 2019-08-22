@@ -130,7 +130,8 @@ extension NewMemeViewController: NewMemeCellDelegate, UIImagePickerControllerDel
             currentCell.imageButton.imageView?.contentMode = .scaleAspectFill
             
                 
-            currentCell.newMeme?.image = imageView.image!
+            currentCell.newMeme?.image = UIImage(data: (imageView.image!.jpegData(compressionQuality: 0.25))!)!
+            
             currentCell.newMeme?.shouldUse = true
             tableView.reloadData()
             
@@ -138,7 +139,7 @@ extension NewMemeViewController: NewMemeCellDelegate, UIImagePickerControllerDel
             let indexPath = IndexPath(row: index!, section: 0)
             //        tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
             
-            print("🌸\(image.pngData())")
+            print("🌸\((imageView.image!.jpegData(compressionQuality: 0.25))!)")
             tableView.reloadData()
             tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
             
