@@ -23,9 +23,6 @@ class NewMemeViewController: UIViewController {
             let newMeme = Meme(image: UIImage(named: "download")!, name: "")
             newMemes.append(newMeme)
         }
-        
-        
-        
         tableView.delegate = self
         tableView.dataSource = self
         imagePicker.delegate = self
@@ -47,10 +44,10 @@ class NewMemeViewController: UIViewController {
         
         let filteredMemes = newMemes.filter({$0.shouldUse == true})
         filteredMemes.forEach({MemeController.shared.addMeme(meme: $0)})
-        print("❌\(CodableMemeController.shared.preparedCodableMemes)")
+//        print("❌\(CodableMemeController.shared.preparedCodableMemes)")
         CodableMemeController.shared.saveToPersistentStorage()
+        ReloadData.reloadCollectionView()
         self.dismiss(animated: true, completion: nil)
-//        tableView.reloadData()
 
         
     }

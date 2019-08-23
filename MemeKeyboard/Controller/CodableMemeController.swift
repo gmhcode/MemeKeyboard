@@ -12,7 +12,7 @@ class CodableMemeController {
     
     static let shared = CodableMemeController()
     
-    ///never Set preparedCodableMemes, only GET
+    ///never Set preparedCodableMemes, only GET .. unless deleting memes
     var preparedCodableMemes : [CodableMeme] = []
     
     ///never GET codableMemes outside of the filterMemesFunction, only SET
@@ -40,14 +40,14 @@ class CodableMemeController {
     }
     
     
-    // update notes
+    /// converts memes to the codable version of memes
     func convertMemesToCodable(memes: [Meme] ) -> [CodableMeme] {
         
         var newCodableMemes : [CodableMeme] = []
         
         for i in memes {
             
-            var newCodableMeme = CodableMeme(imageData: i.image.pngData()!, name: i.name, uuid: i.uuid)
+            let newCodableMeme = CodableMeme(imageData: i.image.pngData()!, name: i.name, uuid: i.uuid)
             
             newCodableMemes.append(newCodableMeme)
         }
@@ -73,7 +73,7 @@ class CodableMemeController {
     }
     
     
-    
+    ///saves all prepared codable memes to storage
     func saveToPersistentStorage(){
         let encoder = JSONEncoder()
         do{

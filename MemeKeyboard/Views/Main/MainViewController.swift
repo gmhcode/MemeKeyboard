@@ -11,6 +11,7 @@ import Photos
 class MainViewController: UIViewController {
 
     var memes = MemeController.shared.memes
+    
     let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,10 +24,15 @@ class MainViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        ReloadData.shared.delegate = self
+//        MemeController.shared.memesToAdd = MemeController.shared.memes
         
         // Do any additional setup after loading the view.
 //        textField.becomeFirstResponder()
     }
+    
+
+    
     
     func openCamera() {
         imagePicker.sourceType = .camera
@@ -53,6 +59,10 @@ class MainViewController: UIViewController {
         
     }
     
+    @IBAction func deleteAll(_ sender: Any) {
+        CodableMemeController.shared.preparedCodableMemes = []
+        CodableMemeController.shared.saveToPersistentStorage()
+    }
     
 }
 
@@ -100,4 +110,12 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
         
         print("did cancel")
     }
+}
+
+extension MainViewController: ReloadDelegate {
+    func reload() {
+        collectionView.reloadData()
+    }
+    
+    
 }

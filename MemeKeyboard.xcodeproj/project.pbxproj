@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903DD270230F30B700714679 /* ReloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903DD26F230F30B700714679 /* ReloadData.swift */; };
 		90E53A7722F389420059FC1B /* KeyboardMemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7622F389420059FC1B /* KeyboardMemeController.swift */; };
 		90E53A7922F38AA00059FC1B /* CodableMeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7822F38AA00059FC1B /* CodableMeme.swift */; };
 		90E53A7A22F38AB40059FC1B /* CodableMeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53A7822F38AA00059FC1B /* CodableMeme.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		903DD26F230F30B700714679 /* ReloadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadData.swift; sourceTree = "<group>"; };
 		90E53A7622F389420059FC1B /* KeyboardMemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardMemeController.swift; sourceTree = "<group>"; };
 		90E53A7822F38AA00059FC1B /* CodableMeme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableMeme.swift; sourceTree = "<group>"; };
 		90E53A7C22F38B0E0059FC1B /* CodableMemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableMemeController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				90F3A61322F0F5D4001B75D6 /* Meme.swift */,
 				90E53A7822F38AA00059FC1B /* CodableMeme.swift */,
+				903DD26F230F30B700714679 /* ReloadData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				90F3A61422F0F5D4001B75D6 /* Meme.swift in Sources */,
 				90F3A62122F2307B001B75D6 /* NewMemeTableViewCell.swift in Sources */,
 				90F3A5F022F0E550001B75D6 /* MainViewController.swift in Sources */,
+				903DD270230F30B700714679 /* ReloadData.swift in Sources */,
 				90F3A61E22F22FD8001B75D6 /* NewMemeViewController.swift in Sources */,
 				90E53A7722F389420059FC1B /* KeyboardMemeController.swift in Sources */,
 				90F3A5EE22F0E550001B75D6 /* AppDelegate.swift in Sources */,

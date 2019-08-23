@@ -15,10 +15,7 @@ class MemeController {
     
     
     private init() {
-        
-        let loadedMemes = convertCodableToMemes(codableMemes: CodableMemeController.shared.loadFromPersistentStorage())
-        memes = loadedMemes
-        
+      
         print("a")
         
     }
@@ -30,20 +27,20 @@ class MemeController {
             
         }
     }
-    /// never GET from memesToAdd, only SET
+    /// never GET from memesToAdd, only SET, memesToAdd filters out the copies already contained in memes, and converts memes to codable memes to be saved
     var memesToAdd : [Meme] = [] {
         didSet {
             
             let memesToAppend = filterMemes(memesToAdd: memesToAdd)
+            
             let codableMemes = CodableMemeController.shared.convertMemesToCodable(memes: memesToAppend)
             
-            memes.append(contentsOf: memesToAppend)
             CodableMemeController.codableMemes.append(contentsOf: codableMemes)
             
             memesToAdd = []
         }
     }
-    
+    /// this filters out the memes that are already in the memes array
     private func filterMemes(memesToAdd : [Meme]) -> [Meme]{
         
         var newMemes : [Meme] = []
